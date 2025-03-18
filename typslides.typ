@@ -10,7 +10,7 @@
 ) = {
   theme-color.update(_theme-colors.at(theme))
 
-  set text(font: "Fira Sans")
+  set text(font: "Times New Roman")
   set page(paper: "presentation-" + ratio, fill: white)
 
   show ref: it => (
@@ -173,6 +173,7 @@
   subtitle: none,
   authors: none,
   info: none,
+  infig: none,
 ) = (
   context {
     _make-frontpage(
@@ -181,6 +182,7 @@
       authors,
       info,
       theme-color.get(),
+      infig,
     )
   }
 )
@@ -188,7 +190,7 @@
 //*************************************** Content Slide ***************************************\\
 
 #let table-of-contents(
-  title: "Contents",
+  title: "Outline",
   text-size: 23pt,
 ) = (
   context {
@@ -244,7 +246,7 @@
       weight: "semibold",
       size: text-size,
       fill: text-color,
-      font: "Fira Sans",
+      font: "Times New Roman",
     )
 
     set align(center + horizon)
@@ -319,7 +321,8 @@
             fill: theme-color.get(),
             weight: "semibold",
             size: 12pt,
-          )[#page-num]
+          // )[#page-num]
+          )[]
         ]
       ],
     )

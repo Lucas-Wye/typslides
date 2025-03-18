@@ -65,14 +65,15 @@
   authors,
   info,
   theme-color,
+  infig,
 ) = {
 
   set align(left + horizon)
   set page(footer: none)
 
-  text(40pt, weight: "bold")[#smallcaps(title)]
+  text(36pt, weight: "bold")[#smallcaps(title)]
 
-  v(-.95cm)
+  v(-.15cm)
 
   if subtitle != none {
     set text(24pt)
@@ -88,6 +89,10 @@
 
   if info != none {
     subtext += text(20pt, fill: theme-color, weight: "regular")[#v(-.15cm) #info]
+  }
+
+  if infig != none {
+    subtext += figure(image(infig, width: 70%))
   }
 
   _divider(color: theme-color)
