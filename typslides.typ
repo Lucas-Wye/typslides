@@ -275,19 +275,19 @@
       } else {
         66%
       },
-      header: [
+      footer: [
         #align(right)[
           #text(
-            fill: white,
+            fill: theme-color.get(),
             weight: "semibold",
             size: 12pt,
           )[#page-num]
         ]
       ],
       margin: if title != none {
-        (x: 1.6cm, top: 2.5cm, bottom: 1.2cm)
+        (x: 1.6cm, top: 2.5cm, bottom: 1cm)
       } else {
-        (x: 1.6cm, top: 1.75cm, bottom: 1.2cm)
+        (x: 1.6cm, top: 1.75cm, bottom: 1cm)
       },
       background: place(_slide-header(title, theme-color.get())),
     )
@@ -315,16 +315,16 @@
     )
 
     set page(
-      header: [
+      footer: [
         #align(right)[
           #text(
             fill: theme-color.get(),
             weight: "semibold",
             size: 12pt,
-          // )[#page-num]
-          )[]
+          )[#page-num]
         ]
       ],
+      margin: (x: 1.6cm, top: 1.75cm, bottom: 1cm),
     )
 
     set list(marker: text(theme-color.get(), [•]))
