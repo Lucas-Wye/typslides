@@ -71,7 +71,7 @@
   set align(left + horizon)
   set page(footer: none)
 
-  text(36pt, weight: "bold")[#smallcaps(title)]
+  text(34pt, weight: "bold")[#smallcaps(title)]
 
   v(-.15cm)
 
@@ -92,7 +92,7 @@
   }
 
   if infig != none {
-    subtext += figure(image(infig, width: 70%))
+    subtext += infig
   }
 
   _divider(color: theme-color)

@@ -2,7 +2,13 @@
 
 #let theme-color = state("theme-color", none)
 #let sections = state("sections", ())
-
+#let theme-font = (
+    (
+      name: "Times New Roman",
+      covers: "latin-in-cjk",
+    ),
+    "SimSun"
+)
 #let typslides(
   ratio: "16-9",
   theme: "bluey",
@@ -10,7 +16,7 @@
 ) = {
   theme-color.update(_theme-colors.at(theme))
 
-  set text(font: "Times New Roman")
+  set text(font: theme-font)
   set page(paper: "presentation-" + ratio, fill: white)
 
   show ref: it => (
@@ -246,7 +252,7 @@
       weight: "semibold",
       size: text-size,
       fill: text-color,
-      font: "Times New Roman",
+      font: theme-font,
     )
 
     set align(center + horizon)
