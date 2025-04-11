@@ -36,6 +36,7 @@
       text(fill: theme-color.get())[#it]
     }
   )
+  show footnote.entry: set text(size: 13pt)
 
   set enum(numbering: (it => context text(fill: black)[*#it.*]))
 
@@ -286,7 +287,7 @@
           #text(
             fill: theme-color.get(),
             weight: "semibold",
-            size: 12pt,
+            size: 11pt,
           )[#page-num]
         ]
       ],
@@ -326,7 +327,7 @@
           #text(
             fill: theme-color.get(),
             weight: "semibold",
-            size: 12pt,
+            size: 11pt,
           )[#page-num]
         ]
       ],
